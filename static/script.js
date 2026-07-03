@@ -203,7 +203,7 @@ function setupMap(center) {
             const clickedLat = e.latLng.lat();
             const clickedLng = e.latLng.lng();
 
-            fetch(`https://roads.googleapis.com/v1/nearestRoads?points=${clickedLat},${clickedLng}&key=AIzaSyBGJeClSZ5MPW5ZzPLiKA6-zPqbXPOsvyU`)
+            fetch(`https://roads.googleapis.com/v1/nearestRoads?points=${clickedLat},${clickedLng}&key=YOUR_GOOGLE_MAPS_API_KEY`)
                 .then(r => r.json())
                 .then(data => {
                     console.log('Roads API response:', JSON.stringify(data));
